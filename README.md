@@ -1,4 +1,4 @@
-# Deep Research Skill for Claude Code / OpenCode
+# Deep Research Skill for Claude Code / OpenCode / Codex
 
 [English](README.md) | [中文](README.zh.md)
 
@@ -6,7 +6,7 @@
 
 > Inspired by [RhinoInsight: Improving Deep Research through Control Mechanisms for Model Behavior and Context](https://arxiv.org/abs/2511.18743)
 
-A structured research workflow skill for Claude Code, supporting two-phase research: outline generation (extensible) and deep investigation. Human-in-the-loop design ensures precise control at every stage.
+A structured research workflow skill for Claude Code, OpenCode, and Codex, supporting two-phase research: outline generation (extensible) and deep investigation. Human-in-the-loop design ensures precise control at every stage.
 
 ![Deep Research Skills Workflow](workflow.png)
 
@@ -18,6 +18,11 @@ A structured research workflow skill for Claude Code, supporting two-phase resea
 - **Due Diligence**: Company research, investment analysis, risk assessment
 
 ## Installation
+
+```bash
+git clone https://github.com/Weizhena/deep-research-skills.git
+cd deep-research-skills
+```
 
 ### Claude Code
 ```bash
@@ -35,7 +40,7 @@ cp -r agents/web-search-modules ~/.claude/agents/
 pip install pyyaml
 ```
 
-### OpenCode (default: gpt-5.2)
+### OpenCode (default: gpt-5.4)
 ```bash
 # Skills (same as Claude Code)
 cp -r skills/research-en/* ~/.claude/skills/   # or research-zh for Chinese
@@ -48,11 +53,56 @@ cp -r agents/web-search-modules ~/.config/opencode/agents/
 pip install pyyaml
 ```
 
+> **Important**: When OpenCode uses a Codex model, it currently does **not** have native `web search`; only `web fetch` is available. This matters for the deep research phase and should be called out explicitly.
+
+### Codex
+```bash
+# English version
+mkdir -p ~/.codex/skills ~/.codex/agents
+cp -r skills/research-codex-en/* ~/.codex/skills/
+
+# Chinese version
+mkdir -p ~/.codex/skills ~/.codex/agents
+cp -r skills/research-codex-zh/* ~/.codex/skills/
+
+# Required: Install web researcher agent and modules
+cp agents-codex/web-researcher.toml ~/.codex/agents/
+cp -r agents-codex/web-search-modules ~/.codex/agents/
+
+# Required: Install Python dependency
+pip install pyyaml
+```
+
+Add or update `~/.codex/config.toml` using either method below:
+
+**Option A: Automatic script**
+
+```bash
+cd deep-research-skills
+bash scripts/install-codex.sh
+```
+
+**Option B: Manual edit**
+
+```toml
+suppress_unstable_features_warning = true
+
+[features]
+multi_agent = true
+default_mode_request_user_input = true
+
+[agents.web_researcher]
+description = "Use this agent when you need to research information on the internet, particularly for debugging issues, finding solutions to technical problems, or gathering comprehensive information from multiple sources. This agent excels at finding relevant discussions. Use when you need creative search strategies, thorough investigation, or compilation of findings from multiple sources."
+config_file = "agents/web-researcher.toml"
+```
+
 ## Commands
 
 > **Claude Code 2.1.0+**: Direct `/skill-name` trigger is now supported!
 >
 > **Older versions**: Use `run /skill-name` format instead.
+>
+> **Codex**: You can trigger these skills from `/skills` -> `List Skills`, or ask naturally, for example `Use the research skill to build an outline for AI Agent Demo 2025`.
 
 | Command (2.1.0+) | Description |
 |------------------|-------------|
@@ -99,7 +149,7 @@ pip install pyyaml
 
 ## Need Help?
 
-If you have questions, ask Claude Code to explain this project:
+If you have questions, ask Claude Code, OpenCode, or Codex to explain this project:
 ```
 Help me understand this project: https://github.com/Weizhena/deep-research-skills
 ```
