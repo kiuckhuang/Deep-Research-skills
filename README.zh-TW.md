@@ -57,6 +57,7 @@ echo 'export OPENCODE_ENABLE_EXA=1' >> ~/.bashrc
 source ~/.bashrc
 
 # 必需：安裝 agent 同模組
+mkdir -p ~/.config/opencode/agents
 cp agents/web-search-opencode.md ~/.config/opencode/agents/web-search.md
 cp -r agents/web-search-modules ~/.config/opencode/agents/
 
