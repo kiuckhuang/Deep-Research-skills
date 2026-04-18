@@ -1,6 +1,6 @@
 # Deep Research Skill for Claude Code / OpenCode / Codex
 
-[English](README.md) | [中文](README.zh.md)
+[English](README.md) | [中文](README.zh.md) | [繁體中文](README.zh-TW.md)
 
 > If you find this project helpful, please give it a star! :star:
 
@@ -43,7 +43,7 @@ pip install pyyaml
 ### OpenCode (default: llama-local/Qwen-3.6-35B-A3B)
 ```bash
 # Skills (same as Claude Code)
-cp -r skills/research-en/* ~/.claude/skills/   # or research-zh for Chinese
+cp -r skills/research-en/* ~/.claude/skills/   # or research-zh for Chinese, research-zh-TW for Traditional Chinese
 
 # Required: Enable web search for current shell
 export OPENCODE_ENABLE_EXA=1
