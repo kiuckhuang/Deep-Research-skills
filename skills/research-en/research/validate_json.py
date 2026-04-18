@@ -9,14 +9,15 @@ from pathlib import Path
 import yaml
 
 CATEGORY_MAPPING = {
-    "basic_info": ["basic_info", "Basic Info"],
-    "technical_features": ["technical_features", "technical_characteristics", "Technical Features"],
-    "performance_metrics": ["performance_metrics", "performance", "Performance Metrics"],
-    "milestone_significance": ["milestone_significance", "milestones", "Milestone Significance"],
-    "business_info": ["business_info", "commercial_info", "Business Info"],
-    "competition_ecosystem": ["competition_ecosystem", "competition", "Competition Ecosystem"],
-    "history": ["history", "History"],
-    "market_positioning": ["market_positioning", "market", "Market Positioning"],
+    "Basic Info": ["basic_info", "基本信息"],
+    "Technical Features": ["technical_features", "technical_characteristics", "技术特性"],
+    "Performance Metrics": ["performance_metrics", "performance", "性能指标"],
+    "Milestone Significance": ["milestone_significance", "milestones", "里程碑意义"],
+    "Business Info": ["business_info", "commercial_info", "商业信息"],
+    "Competition & Ecosystem": ["competition_ecosystem", "competition", "竞争与生态"],
+    "History": ["history", "历史沿革"],
+    "Market Positioning": ["market_positioning", "market", "市场定位"],
+    "Sources": ["sources", "来源"],
 }
 
 _SKIP_KEYS = {"_source_file", "uncertain"}

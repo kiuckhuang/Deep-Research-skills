@@ -45,6 +45,7 @@ Read {fields_path} to get all field definitions
 2. Mark uncertain field values with [uncertain]
 3. Add uncertain array at the end of JSON, listing all uncertain field names
 4. All field values must be in English
+5. Always include a "sources" field as a list of objects with url and description fields
 
 ## Output Path
 {output_path}
@@ -71,6 +72,7 @@ Read {project_dir}/fields.yaml to get all field definitions
 2. Mark uncertain field values with [uncertain]
 3. Add uncertain array at the end of JSON, listing all uncertain field names
 4. All field values must be in English
+5. Always include a "sources" field as a list of objects with url and description fields
 
 ## Output Path
 {project_dir}/results/GitHub_Copilot.json

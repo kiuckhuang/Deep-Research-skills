@@ -77,7 +77,16 @@ Collect fields that exist in JSON but not defined in fields.yaml, put in "Other 
 - Nested structure top-level keys: `basic_info`, `technical_features` etc.
 - `uncertain` array: Display each field name on separate line, don't compress into one line
 
-**5. Uncertain Value Skipping**
+**5. Sources Display**
+Always display the "sources" field in each item section. Format as:
+```markdown
+### Sources
+1. [Description](url)
+2. [Description](url)
+```
+If sources is empty or missing, skip this section.
+
+**6. Uncertain Value Skipping**
 Skip conditions:
 - Field value contains `[uncertain]` string
 - Field name is in `uncertain` array

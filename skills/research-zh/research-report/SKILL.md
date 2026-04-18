@@ -79,7 +79,16 @@ CATEGORY_MAPPING = {
 - 嵌套结构顶级key：`basic_info`, `technical_features`等
 - `uncertain`数组：需要逐行显示每个字段名，不要压缩成一行
 
-**5. 不确定值跳过**
+**5. 信息来源展示**
+每个item部分必须展示sources字段。格式如下：
+```markdown
+### Sources
+1. [描述](url)
+2. [描述](url)
+```
+如果sources为空或缺失，则跳过此部分。
+
+**6. 不确定值跳过**
 跳过条件：
 - 字段值包含`[不确定]`字符串
 - 字段名在`uncertain`数组中

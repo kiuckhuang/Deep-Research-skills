@@ -17,6 +17,7 @@ CATEGORY_MAPPING = {
     "競爭與生態": ["competition_ecosystem", "competition", "競爭與生態"],
     "歷史沿革": ["history", "歷史沿革"],
     "市場定位": ["market_positioning", "market", "市場定位"],
+    "資訊來源": ["sources", "來源"],
 }
 
 _SKIP_KEYS = {"_source_file", "uncertain"}

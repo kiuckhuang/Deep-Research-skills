@@ -79,7 +79,16 @@ CATEGORY_MAPPING = {
 - 巢狀結構頂層key：`basic_info`, `technical_features`等
 - `uncertain`陣列：需要逐行顯示每個欄位名，不要壓縮成一行
 
-**5. 不確定值跳過**
+**5. 資訊來源展示**
+每個item部分必須展示sources欄位。格式如下：
+```markdown
+### Sources
+1. [描述](url)
+2. [描述](url)
+```
+如果sources為空或缺失，則跳過此部分。
+
+**6. 不確定值跳過**
 跳過條件：
 - 欄位值包含`[不確定]`字串
 - 欄位名在`uncertain`陣列中

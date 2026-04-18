@@ -17,6 +17,7 @@ CATEGORY_MAPPING = {
     "competition_ecosystem": ["competition_ecosystem", "competition", "Competition Ecosystem"],
     "history": ["history", "History"],
     "market_positioning": ["market_positioning", "market", "Market Positioning"],
+    "sources": ["sources", "Sources"],
 }
 
 _SKIP_KEYS = {"_source_file", "uncertain"}

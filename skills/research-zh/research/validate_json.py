@@ -17,6 +17,7 @@ CATEGORY_MAPPING = {
     "竞争与生态": ["competition_ecosystem", "competition", "竞争与生态"],
     "历史沿革": ["history", "历史沿革"],
     "市场定位": ["market_positioning", "market", "市场定位"],
+    "信息来源": ["sources", "来源"],
 }
 
 _SKIP_KEYS = {"_source_file", "uncertain"}
