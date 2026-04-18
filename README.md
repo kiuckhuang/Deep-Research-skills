@@ -42,8 +42,9 @@ pip install pyyaml
 
 ### OpenCode (default: llama-local/Qwen-3.6-35B-A3B)
 ```bash
-# Skills (same as Claude Code)
-cp -r skills/research-en/* ~/.claude/skills/   # or research-zh for Chinese, research-zh-TW for Traditional Chinese
+# Skills
+mkdir -p ~/.config/opencode/skills
+cp -r skills/research-en/* ~/.config/opencode/skills/   # or research-zh for Chinese, research-zh-TW for Traditional Chinese
 
 # Required: Enable web search for current shell
 export OPENCODE_ENABLE_EXA=1
