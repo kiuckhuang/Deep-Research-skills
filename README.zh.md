@@ -40,7 +40,7 @@ cp -r agents/web-search-modules ~/.claude/agents/
 pip install pyyaml
 ```
 
-### OpenCode (默认: gpt-5.4)
+### OpenCode (默认: llama-local/Qwen-3.6-35B-A3B)
 ```bash
 # Skills (同 Claude Code)
 cp -r skills/research-zh/* ~/.claude/skills/   # 或 research-en 英文版

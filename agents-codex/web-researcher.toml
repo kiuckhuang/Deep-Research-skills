@@ -1,4 +1,4 @@
-model = "gpt-5.4"
+model = "llama-local/Qwen-3.6-35B-A3B"
 model_reasoning_effort = "high"
 sandbox_mode = "read-only"
 web_search = "live"
