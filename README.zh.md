@@ -20,7 +20,7 @@
 ## 安装
 
 ```bash
-git clone https://github.com/Weizhena/deep-research-skills.git
+git clone https://github.com/kiuckhuang/deep-research-skills.git
 cd deep-research-skills
 ```
 

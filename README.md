@@ -20,7 +20,7 @@ A structured research workflow skill for Claude Code, OpenCode, and Codex, suppo
 ## Installation
 
 ```bash
-git clone https://github.com/Weizhena/deep-research-skills.git
+git clone https://github.com/kiuckhuang/deep-research-skills.git
 cd deep-research-skills
 ```
 
